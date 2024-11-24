@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 import RootProviders from "@/components/providers/RootProviders";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Budget Tracker",
@@ -18,17 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html 
-        lang="en" 
-        className="dark" 
+    <ClerkProvider afterSignOutUrl={"/sign-in"}>
+      <html
+        lang="en"
+        className="dark"
         style={{
-          colorScheme: 'dark',
+          colorScheme: "dark",
         }}
       >
-        <body
-          className={inter.className}>
-            <RootProviders>{children}</RootProviders>
+        <body className={inter.className}>
+          <RootProviders>{children}</RootProviders>
         </body>
       </html>
     </ClerkProvider>
