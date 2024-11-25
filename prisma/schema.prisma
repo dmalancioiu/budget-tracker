@@ -22,7 +22,7 @@ model Category {
   @@unique([name, userId, type])
 }
 
-model Tansaction {
+model Transaction {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
