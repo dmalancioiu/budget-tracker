@@ -74,8 +74,11 @@ function CategoriesCard({
   return (
     <Card className="h-80 w-full col-span-6">
       <CardHeader>
-        <CardTitle className="grid grid-flow-row text-2xl justify-between gap-2 text-muted-foreground md:grid-flow-col">
-            {type === "income" ? "Incomes" : "Expenses"} by category
+        <CardTitle
+          className="grid grid-flow-row text-2xl justify-between 
+        gap-2  md:grid-flow-col"
+        >
+          {type === "income" ? "Incomes" : "Expenses"} by category
         </CardTitle>
       </CardHeader>
 
@@ -100,22 +103,23 @@ function CategoriesCard({
                 return (
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center justify-between">
-                      <span className="flex items-center text-gray-400">
+                      <span className="flex items-center">
                         {item.categoryIcon} {item.category}
                         <span className="ml-2 text-xs to-muted-foreground">
-                            ({percentage.toFixed(0)}%)
+                          ({percentage.toFixed(0)}%)
                         </span>
                       </span>
 
-                      <span className="text-sm text-gray-400">
+                      <span className="text-sm ">
                         {formatter.format(amount)}
                       </span>
                     </div>
 
-                    <Progress value={percentage} 
-                        indicator={
-                            type === "income" ? "bg-emerald-500" : "bg-red-500"
-                        }
+                    <Progress
+                      value={percentage}
+                      indicator={
+                        type === "income" ? "bg-emerald-500" : "bg-red-500"
+                      }
                     />
                   </div>
                 );

@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 import CreateTransactionDialog from "./_components/CreateTransactionDialog";
 import Overview from "./_components/Overview";
+import History from "./_components/History";
 
 async function page() {
   const user = await currentUser();
@@ -34,7 +35,7 @@ async function page() {
               trigger={
                 <Button
                   variant={"outline"}
-                  className="border-x-emerald-500 bg-emerald-950 text-white
+                  className="border-x-emerald-700 bg-emerald-600 text-white
                hover:bg-emerald-700 hover:text-white"
                 >
                   New income 🤑
@@ -46,8 +47,8 @@ async function page() {
               trigger={
                 <Button
                   variant={"outline"}
-                  className="border-x-rose-500 bg-rose-950 text-white
-               hover:bg-rose-700 hover:text-white"
+                  className="border-x-rose-800 bg-rose-700 text-white
+               hover:bg-rose-800 hover:text-white"
                 >
                   New expense 😤
                 </Button>
@@ -58,6 +59,8 @@ async function page() {
         </div>
       </div>
       <Overview userSettings={userSettings} />
+
+      <History userSettings={userSettings} />
     </div>
   );
 }
