@@ -115,7 +115,7 @@ function CreateTransactionDialog({ trigger, type }: Props) {
         <DialogHeader>
           <DialogTitle>
             {" "}
-            Create a new{" "}
+            Create a new {" "}
             <span
               className={cn(
                 "m-1",
