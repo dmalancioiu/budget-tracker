@@ -101,7 +101,7 @@ function CategoriesCard({
                 const percentage = (amount * 100) / (total || amount);
 
                 return (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2" key={item._sum.amount}>
                     <div className="flex items-center justify-between">
                       <span className="flex items-center">
                         {item.categoryIcon} {item.category}

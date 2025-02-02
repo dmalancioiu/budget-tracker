@@ -1,11 +1,9 @@
 "use client"
 
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { TransactionType } from '@/lib/types';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
 import React from 'react'
 import { toast } from 'sonner';
-import { DeleteCategory } from '../../_actions/categories';
 import { DeleteTransaction } from '../_actions/deleteTransaction';
 
 interface Props {
