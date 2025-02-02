@@ -145,7 +145,7 @@ function TransactionTable({ from, to }: Props) {
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
     const history = useQuery<GetTransactionHistoryResponseType>({
-        queryKey: ["transactions", "history", "from", "to"],
+        queryKey: ["transactions", "history", from, to],
         queryFn: () =>
             fetch(
                 `/api/transactions-history?from=${DateToUTCDate(

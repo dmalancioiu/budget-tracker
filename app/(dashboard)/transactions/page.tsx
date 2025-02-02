@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { MAX_DATE_RANGE_DAYS } from '@/lib/constants';
@@ -11,7 +11,7 @@ function TransactionsPage() {
     const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
         from: startOfMonth(new Date()),
         to: new Date(),
-    })
+    });
     return (
 
         <>
