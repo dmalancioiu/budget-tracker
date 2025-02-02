@@ -1,7 +1,7 @@
 import local from "next/font/local";
 import { Currencies } from "./currencies";
 
-export function DateToUTCDate(date: Date) {
+export function DateToUTCDate(date: Date): string {
   return new Date(
     Date.UTC(
       date.getFullYear(),
@@ -12,7 +12,7 @@ export function DateToUTCDate(date: Date) {
       date.getSeconds(),
       date.getMilliseconds()
     )
-  );
+  ).toISOString(); // Return as a string
 }
 
 export function GetFormatterForCurrency(currency: string) {
