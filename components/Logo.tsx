@@ -13,7 +13,7 @@ function Logo() {
         to-orange-600 bg-clip-text text-3xl font-bold 
         leading-tight tracking-tighter text-transparent"
       >
-        BudgetTracker
+        Spendee
       </p>
     </a>
   );
@@ -27,7 +27,7 @@ export function LogoMobile() {
         to-orange-600 bg-clip-text text-3xl font-bold 
         leading-tight tracking-tighter text-transparent"
       >
-        BudgetTracker
+        Spendee
       </p>
     </a>
   );
