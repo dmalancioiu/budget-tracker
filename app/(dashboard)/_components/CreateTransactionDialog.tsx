@@ -50,7 +50,7 @@ import { CreateTransaction } from "../_actions/transactions";
 import { toast } from "sonner";
 import { useSearchParams } from "next/navigation";
 import { CreateCategorySchemaType } from "@/schema/categories";
-import { DateToUTCDate } from "@/lib/helpers";
+import { DateToUTCDate, DateToUTCDateDefault } from "@/lib/helpers";
 
 function CreateTransactionDialog({ trigger, type }: Props) {
   const form = useForm<CreateTransactionSchemaType>({
@@ -102,7 +102,7 @@ function CreateTransactionDialog({ trigger, type }: Props) {
 
       mutate({
         ...values,
-        date: DateToUTCDate(values.date),
+        date: DateToUTCDateDefault(values.date),
       });
     },
     [mutate]
