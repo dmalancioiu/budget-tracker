@@ -25,9 +25,9 @@ async function page() {
   }
 
   return (
-    <div className="h-full w-full bg-background">
-      <div className="border-b bg-card w-full">
-        <div className="w-full flex flex-wrap items-center justify-between gap-6 px-8 py-8">
+    <div className="container h-full bg-background">
+      <div className="border-b bg-card">
+        <div className="flex flex-wrap items-center justify-between gap-6 py-8 px-8">
           <p className="text-3xl font-bold">Hello, {user.firstName}! 👋</p>
 
           <div className="flex items-center gap-3">
@@ -62,6 +62,7 @@ async function page() {
 
       <History userSettings={userSettings} />
     </div>
+
   );
 }
 

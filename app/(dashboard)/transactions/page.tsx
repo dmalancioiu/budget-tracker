@@ -16,8 +16,7 @@ function TransactionsPage() {
 
         <>
             <div className="border-b bg-card">
-                <div className=" flex flex-wrap items-center 
-                    justify-between gap-6 py-8 px-8">
+                <div className="flex flex-wrap items-end justify-between gap-6 py-8 px-8">
                     <div>
                         <p className="text-3xl font-bold">Transation history</p>
                     </div>

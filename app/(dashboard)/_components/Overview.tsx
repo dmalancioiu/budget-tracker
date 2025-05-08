@@ -16,7 +16,7 @@ function Overview({ userSettings }: { userSettings: UserSettings }) {
   });
   return (
     <>
-      <div className="w-full flex flex-wrap items-end justify-between gap-2 py-6 px-6">
+      <div className="flex flex-wrap items-end justify-between gap-2 py-6 px-8">
         <h2 className="text-3xl font-bold">Overview</h2>
         <div className="flex items-center gap-3">
           <DateRangePicker
@@ -39,7 +39,7 @@ function Overview({ userSettings }: { userSettings: UserSettings }) {
           />
         </div>
       </div>
-      <div className="w-full flex flex-col gap-2 px-6 py-6">
+      <div className="flex flex-col gap-2 px-6">
         <StatsCards
           userSettings={userSettings}
           from={dateRange.from}
